@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemuel Escribano — Portfolio</title>
+    <meta name="description" content="Personal portfolio of Chemuel Escribano — IT Support, Systems, and Front-End Development. Based in the Philippines.">
+    <meta property="og:title" content="Chemuel Escribano — Portfolio">
+    <meta property="og:description" content="IT Support · Systems · Front-End Development. Built with HTML, CSS, and JavaScript.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/9572/9572786.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Chemuel Escribano — Portfolio">
+    <meta name="twitter:description" content="IT Support · Systems · Front-End Development.">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/9572/9572786.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
-
 </head>
 <body>
 
@@ -25,6 +32,7 @@
         <li><a href="#gallery" >Gallery</a></li>
         <li><a href="#profile" >Profile</a></li>
         <li><a href="#explore" >Explore</a></li>
+        <li><a href="#contact" >Contact</a></li>
         <li><a href="#stack"   >Stack</a></li>
     </ul>
 </nav>
@@ -34,20 +42,46 @@
     <div class="container">
         <div class="hero-inner">
             <div>
-                <p class="hero-kicker">IT Specialist · Web Developer</p>
+                <p class="hero-kicker">Open to Work · Philippines</p>
                 <h1 class="hero-title">
                     Chemuel<br><em>Escribano</em>
                 </h1>
                 <p class="hero-sub">
-                    Detail-oriented and organized with a background in analytical thinking and communication. Passionate about building clean, functional web experiences.
+                    IT Support, Systems &amp; Front-End Development. Detail-oriented, self-taught, and actively seeking roles in IT support, administration, and web development.
                 </p>
+                <div class="roles-wrap" aria-label="Target roles">
+                    <span class="role-pill">IT Support Staff</span>
+                    <span class="role-pill">IT System Administrator</span>
+                    <span class="role-pill">IT Officer</span>
+                    <span class="role-pill">Data Analyst (Entry Level)</span>
+                    <span class="role-pill">Front-End Developer (Entry Level)</span>
+                    <span class="role-pill">Systems Coordinator</span>
+                    <span class="role-pill">Data Encoder</span>
+                    <span class="role-pill">Admin / Office Staff</span>
+                </div>
                 <div class="hero-actions">
-                    <a href="#explore" class="btn-primary">
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 4v4l3 2"/></svg>
-                        View Projects
+                    <a href="#contact" class="btn-primary">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l6 5 6-5"/><rect x="1" y="3" width="14" height="10" rx="2"/></svg>
+                        Get in Touch
                     </a>
-                    <a href="#profile" class="btn-ghost">
-                        See Profile
+                    <span class="btn-cv" style="opacity:.35;cursor:not-allowed;pointer-events:none;display:none;" aria-disabled="true" hidden="true" aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v8M5 7l3 3 3-3"/><path d="M2 12h12"/></svg>
+                        Download CV
+                    </span>
+                    <a href="#explore" class="btn-ghost">View Projects</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="mailto:escribanochemuel@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 4l6 5 6-5"/><rect x="1" y="3" width="14" height="10" rx="2"/></svg>
+                        escribanochemuel@gmail.com
+                    </a>
+                    <a href="https://github.com/Pxych09" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.34C3.73 14.38 3.27 13 3.27 13c-.36-.92-.88-1.17-.88-1.17-.72-.49.05-.48.05-.48.8.06 1.22.82 1.22.82.71 1.21 1.87.86 2.33.66.07-.51.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.66 7.66 0 018 4.67c.68 0 1.36.09 2 .27 1.52-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.19c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                        Pxych09
+                    </a>
+                    <a href="https://www.linkedin.com/in/escribano-chemuel-e-b84577279/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                        LinkedIn
                     </a>
                 </div>
             </div>
@@ -234,16 +268,67 @@
                 </div>
             </div>
 
+            <!-- Certifications & Training (Accordion) -->
+            <div class="profile-card">
+                <div class="profile-block">
+                    <p class="block-label">Certifications &amp; Training</p>
+                    <div class="cert-accordion" id="certAccordion">
+                        <!-- filled by JS -->
+                    </div>
+                </div>
+            </div>
+
             <!-- Skills -->
             <div class="profile-card">
                 <div class="profile-block">
-                    <p class="block-label">Skills</p>
-                    <div class="skill-chips">
-                        <span class="chip">Technical Support &amp; Troubleshooting</span>
-                        <span class="chip">Web Development (HTML, CSS, JS)</span>
-                        <span class="chip">Cybersecurity Fundamentals</span>
-                        <span class="chip">Data Analysis &amp; Visualization</span>
-                        <span class="chip">Network Configuration</span>
+                    <p class="block-label">Technical Skills</p>
+                    <div class="skill-group">
+                        <p class="skill-group-label">IT &amp; Systems</p>
+                        <div class="skill-chips">
+                            <span class="chip">IT Support</span>
+                            <span class="chip">Ticketing Systems</span>
+                            <span class="chip">Google Workspace Admin</span>
+                            <span class="chip">User &amp; Group Management</span>
+                            <span class="chip">Software Testing &amp; QA</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <p class="skill-group-label">Microsoft Office</p>
+                        <div class="skill-chips">
+                            <span class="chip">Word</span>
+                            <span class="chip">Excel</span>
+                            <span class="chip">PowerPoint</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <p class="skill-group-label">Google Services</p>
+                        <div class="skill-chips">
+                            <span class="chip">Docs &amp; Sheets</span>
+                            <span class="chip">Drive</span>
+                            <span class="chip">Apps Script</span>
+                            <span class="chip">Google Console</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <p class="skill-group-label">Front-End Development</p>
+                        <div class="skill-chips">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">JavaScript</span>
+                            <span class="chip">Bootstrap</span>
+                            <span class="chip">Tailwind CSS</span>
+                            <span class="chip">GitHub</span>
+                        </div>
+                    </div>
+                    <div class="skill-group" style="margin-bottom:0">
+                        <p class="skill-group-label">Soft Skills</p>
+                        <div class="skill-chips">
+                            <span class="chip">Report Writing</span>
+                            <span class="chip">Teamwork &amp; Collaboration</span>
+                            <span class="chip">Attention to Detail</span>
+                            <span class="chip">Multitasking</span>
+                            <span class="chip">Time Management</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,6 +345,101 @@
         <p class="section-desc">Web pages built for practice — some public, some require credentials.</p>
         <div class="explore-grid" id="exploreGrid">
             <!-- filled by JS -->
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="page-section">
+    <div class="container">
+        <span class="section-eyebrow">Testimonials</span>
+        <h2 class="section-heading">What people say</h2>
+        <p class="section-desc">Feedback from colleagues, supervisors, and peers.</p>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-quote">
+                    Chemuel is consistently reliable and takes initiative when solving technical issues. His attention to detail and calm approach under pressure made him a valuable member of the support team.
+                </p>
+                <div class="testimonial-person">
+                    <div class="testimonial-avatar" aria-hidden="true">—</div>
+                    <div>
+                        <p class="testimonial-name">[ Supervisor Name ]</p>
+                        <p class="testimonial-role">IT Manager · Outer Space</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-placeholder" aria-label="Placeholder for additional testimonial">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--border)"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                <p>More testimonials coming soon</p>
+                <span>// placeholder</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="page-section">
+    <div class="container">
+        <span class="section-eyebrow">Contact</span>
+        <h2 class="section-heading">Get in touch</h2>
+        <p class="section-desc">Open to full-time, part-time, and freelance opportunities. Feel free to reach out.</p>
+        <div class="contact-layout">
+            <div class="contact-card">
+                <p class="contact-card-label">Email</p>
+                <p class="contact-card-value">
+                    <a href="mailto:escribanochemuel@gmail.com">escribanochemuel@gmail.com</a>
+                </p>
+                <p class="contact-card-sub">Best way to reach me</p>
+            </div>
+            <div class="contact-card">
+                <p class="contact-card-label">Location</p>
+                <p class="contact-card-value">Quezon City, Philippines</p>
+                <p class="contact-card-sub">Open to on-site, hybrid &amp; remote</p>
+            </div>
+            <div class="contact-card">
+                <p class="contact-card-label">GitHub</p>
+                <p class="contact-card-value">
+                    <a href="https://github.com/Pxych09" target="_blank" rel="noopener">github.com/Pxych09</a>
+                </p>
+                <p class="contact-card-sub">Projects &amp; code samples</p>
+            </div>
+            <div class="contact-card">
+                <p class="contact-card-label">LinkedIn</p>
+                <p class="contact-card-value">
+                    <a href="https://www.linkedin.com/in/escribano-chemuel-e-b84577279/" target="_blank" rel="noopener">Escribano Chemuel E.</a>
+                </p>
+                <p class="contact-card-sub">Professional profile</p>
+            </div>
+            <div class="contact-form-wrap">
+                <h3>Send a message</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cf-name">Your Name</label>
+                        <input type="text" id="cf-name" placeholder="Juan dela Cruz">
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-email">Your Email</label>
+                        <input type="email" id="cf-email" placeholder="juan@company.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full">
+                        <label for="cf-subject">Subject</label>
+                        <input type="text" id="cf-subject" placeholder="Job opportunity / Collaboration / etc.">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full">
+                        <label for="cf-message">Message</label>
+                        <textarea id="cf-message" rows="4" placeholder="Hi Chemuel, I came across your portfolio..."></textarea>
+                    </div>
+                </div>
+                <button class="form-submit" id="cfSubmit">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h12M10 4l4 4-4 4"/></svg>
+                    Send via Email
+                </button>
+                <p class="form-note">// Opens your default email client with the message pre-filled</p>
+            </div>
         </div>
     </div>
 </section>
@@ -301,7 +481,14 @@
 </div>
 
 <footer>
-    <p>© 2025 Chemuel Escribano · Built with HTML, CSS &amp; JavaScript</p>
+    <div style="max-width:var(--max-w);margin-inline:auto;display:flex;flex-direction:column;align-items:center;gap:.75rem;">
+        <div style="display:flex;gap:1.25rem;flex-wrap:wrap;justify-content:center;">
+            <a href="mailto:escribanochemuel@gmail.com" style="font-size:.75rem;color:rgba(255,255,255,.4);font-family:var(--font-mono);transition:color .15s;" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">escribanochemuel@gmail.com</a>
+            <a href="https://github.com/Pxych09" target="_blank" rel="noopener" style="font-size:.75rem;color:rgba(255,255,255,.4);font-family:var(--font-mono);transition:color .15s;" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">GitHub</a>
+            <a href="https://www.linkedin.com/in/escribano-chemuel-e-b84577279/" target="_blank" rel="noopener" style="font-size:.75rem;color:rgba(255,255,255,.4);font-family:var(--font-mono);transition:color .15s;" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">LinkedIn</a>
+        </div>
+        <p style="font-size:.72rem;color:rgba(255,255,255,.2);font-family:var(--font-mono);">© <span id="footerYear"></span> Chemuel Escribano · Built with HTML, CSS &amp; JavaScript</p>
+    </div>
 </footer>
 
 <script src="./index.js"></script>
