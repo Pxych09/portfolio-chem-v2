@@ -20,7 +20,7 @@ navLinks.forEach(link => {
 });
 
 /* Intersection-based active nav */
-const sections = ['home','about','gallery','profile','explore','stack'];
+const sections = ['home','about','gallery','profile','explore','contact','testimonials','stack'];
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -56,6 +56,98 @@ aboutData.forEach(item => {
             <p class="about-body">${item.body}</p>
         </div>
     `);
+});
+
+/* ── Certifications Accordion ── */
+const certData = [
+    {
+        name: 'HTML, CSS, JavaScript Courses',
+        issuer: 'SoloLearn',
+        status: 'done', // 'done' | 'wip'
+        statusLabel: 'Completed',
+        modules: [
+            { name: 'Introduction to HTML',        done: 82,  total: 82  },
+            { name: 'Introduction to CSS',         done: 74,  total: 74  },
+            { name: 'Introduction to JavaScript',  done: 91,  total: 91  },
+            { name: 'JavaScript Intermediate',     done: 68,  total: 68  },
+            { name: 'Web Development',             done: 120, total: 120 },
+        ]
+    },
+    {
+        name: 'Responsive Web Design',
+        issuer: 'freeCodeCamp',
+        status: 'wip',
+        statusLabel: 'In Progress',
+        modules: [
+            { name: 'HTML',      done: 284, total: 302  },
+            { name: 'Computers', done: 16,  total: 16   },
+            { name: 'CSS',       done: 866, total: 1234 },
+        ]
+    },
+];
+
+const certAccordion = document.getElementById('certAccordion');
+
+certData.forEach((cert, idx) => {
+    // Build module rows HTML
+    const modulesHTML = cert.modules.map(m => {
+        const pct = Math.round((m.done / m.total) * 100);
+        const fillClass = m.done === m.total ? 'complete' : '';
+        return `
+            <div class="cert-module">
+                <div class="cert-module-meta">
+                    <span class="cert-module-name">${m.name}</span>
+                    <span class="cert-module-count">${m.done} of ${m.total} completed</span>
+                </div>
+                <div class="cert-progress-track">
+                    <div class="cert-progress-fill ${fillClass}" style="width:${pct}%"></div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    certAccordion.insertAdjacentHTML('beforeend', `
+        <div class="cert-item" id="cert-${idx}">
+            <button class="cert-trigger" aria-expanded="false" aria-controls="cert-body-${idx}">
+                <div class="cert-trigger-left">
+                    <span class="cert-name">${cert.name}</span>
+                    <span class="cert-issuer">${cert.issuer}</span>
+                </div>
+                <div class="cert-trigger-right">
+                    <span class="cert-badge ${cert.status}">${cert.statusLabel}</span>
+                    <svg class="cert-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="4 6 8 10 12 6"/>
+                    </svg>
+                </div>
+            </button>
+            <div class="cert-body" id="cert-body-${idx}" role="region">
+                <div class="cert-modules">
+                    ${modulesHTML}
+                </div>
+            </div>
+        </div>
+    `);
+});
+
+// Accordion toggle logic
+certAccordion.addEventListener('click', e => {
+    const trigger = e.target.closest('.cert-trigger');
+    if (!trigger) return;
+
+    const item = trigger.closest('.cert-item');
+    const isOpen = item.classList.contains('open');
+
+    // Close all
+    certAccordion.querySelectorAll('.cert-item').forEach(ci => {
+        ci.classList.remove('open');
+        ci.querySelector('.cert-trigger').setAttribute('aria-expanded', 'false');
+    });
+
+    // Open clicked (unless it was already open)
+    if (!isOpen) {
+        item.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+    }
 });
 
 /* ── Explore / modal ── */
@@ -260,6 +352,7 @@ stackItems.forEach(s => {
         </div>
     `);
 });
+
 const backdrop       = document.getElementById('modalBackdrop');
 const modalTitle     = document.getElementById('modalTitle');
 const modalMeta      = document.getElementById('modalMeta');
@@ -273,13 +366,13 @@ function openModal(idx) {
     modalMeta.textContent  = p.meta;
     visitBtn.onclick       = () => window.open(p.url, '_blank');
     if (p.url) {
-        modalIframe.src          = p.url;
+        modalIframe.src           = p.url;
         modalIframe.style.display = 'block';
-        fallback.style.display   = 'none';
+        fallback.style.display    = 'none';
     } else {
-        modalIframe.src          = '';
+        modalIframe.src           = '';
         modalIframe.style.display = 'none';
-        fallback.style.display   = 'flex';
+        fallback.style.display    = 'flex';
     }
     backdrop.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -300,3 +393,18 @@ document.getElementById('modalClose').addEventListener('click', closeModal);
 document.getElementById('modalClose2').addEventListener('click', closeModal);
 backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+/* ── Contact form → mailto ── */
+document.getElementById('cfSubmit').addEventListener('click', () => {
+    const name    = document.getElementById('cf-name').value.trim();
+    const email   = document.getElementById('cf-email').value.trim();
+    const subject = document.getElementById('cf-subject').value.trim();
+    const message = document.getElementById('cf-message').value.trim();
+    if (!name && !message) return;
+    const body = `Name: ${name || '(not provided)'}\nEmail: ${email || '(not provided)'}\n\n${message}`;
+    const mailto = `mailto:escribanochemuel@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Inquiry')}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+});
+
+/* ── Dynamic footer year ── */
+document.getElementById('footerYear').textContent = new Date().getFullYear();
