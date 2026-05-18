@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemuel Escribano — Portfolio</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/9572/9572786.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+    <span class="nav-logo"><span>C</span>hem</span>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+        <li><a href="#home"    class="active">Home</a></li>
+        <li><a href="#about"   >About</a></li>
+        <li><a href="#gallery" >Gallery</a></li>
+        <li><a href="#profile" >Profile</a></li>
+        <li><a href="#explore" >Explore</a></li>
+        <li><a href="#stack"   >Stack</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="page-section">
+    <div class="container">
+        <div class="hero-inner">
+            <div>
+                <p class="hero-kicker">IT Specialist · Web Developer</p>
+                <h1 class="hero-title">
+                    Chemuel<br><em>Escribano</em>
+                </h1>
+                <p class="hero-sub">
+                    Detail-oriented and organized with a background in analytical thinking and communication. Passionate about building clean, functional web experiences.
+                </p>
+                <div class="hero-actions">
+                    <a href="#explore" class="btn-primary">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 4v4l3 2"/></svg>
+                        View Projects
+                    </a>
+                    <a href="#profile" class="btn-ghost">
+                        See Profile
+                    </a>
+                </div>
+            </div>
+            <div class="hero-stats" aria-label="Quick stats">
+                <div class="stat-item">
+                    <span class="stat-num">7+</span>
+                    <span class="stat-lbl">Certs Earned</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">4</span>
+                    <span class="stat-lbl">Live Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">2+</span>
+                    <span class="stat-lbl">Yrs Experience</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page-section">
+    <div class="container">
+        <span class="section-eyebrow">About</span>
+        <h2 class="section-heading">A little context</h2>
+        <p class="section-desc">Learn more about the page, the person, and the work behind it.</p>
+        <div class="about-grid" id="aboutGrid">
+            <!-- filled by JS -->
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="page-section">
+    <div class="container">
+        <span class="section-eyebrow">Gallery</span>
+        <h2 class="section-heading">Certifications</h2>
+        <p class="section-desc">
+            Preview images of certificates earned through the SoloLearn mobile platform —
+            each awarded upon completing lessons, quizzes, and assessments.
+        </p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="./imgs/prog_hub_webdev.jpg" alt="Web Development (Programming Hero)" loading="lazy">
+                <div class="gallery-cap">
+                    <h4>Web Dev (Programming Hero)</h4>
+                    <p>13 Nov 2023</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./imgs/webdev.png" alt="Web Development" loading="lazy">
+                <div class="gallery-cap">
+                    <h4>Web Development</h4>
+                    <p>21 Dec 2023</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./imgs/intro_hml.png" alt="Introduction to HTML" loading="lazy">
+                <div class="gallery-cap">
+                    <h4>Introduction to HTML</h4>
+                    <p>25 Oct 2023</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./imgs/intro_css.png" alt="Introduction to CSS" loading="lazy">
+                <div class="gallery-cap">
+                    <h4>Introduction to CSS</h4>
+                    <p>10 Sep 2023</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./imgs/intermmediate_js.png" alt="JavaScript Intermediate" loading="lazy">
+                <div class="gallery-cap">
+                    <h4>JavaScript Intermediate</h4>
+                    <p>06 Sep 2023</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./imgs/intro_js.png" alt="Introduction to JavaScript" loading="lazy">
+                <div class="gallery-cap">
+                    <h4>Introduction to JavaScript</h4>
+                    <p>03 Sep 2023</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./imgs/gamedev_js.png" alt="Game Development with JS" loading="lazy">
+                <div class="gallery-cap">
+                    <h4>Game Dev with JS</h4>
+                    <p>01 Sep 2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROFILE -->
+<section id="profile" class="page-section">
+    <div class="container">
+        <span class="section-eyebrow">Profile</span>
+        <h2 class="section-heading">Background</h2>
+        <p class="section-desc">Personal information, education, and work experience.</p>
+
+        <div class="profile-layout">
+
+            <!-- Identity card -->
+            <div class="profile-card">
+                <div class="profile-card-header">
+                    <div class="profile-avatar" aria-hidden="true">CE</div>
+                    <div>
+                        <h2>Chemuel Escribano</h2>
+                        <p>IT Specialist · Web Developer</p>
+                    </div>
+                </div>
+                <div class="profile-block">
+                    <p class="block-label">Personal Information</p>
+                    <div class="info-row"><span class="info-key">Given Name</span><span class="info-val">Chemuel</span></div>
+                    <div class="info-row"><span class="info-key">Middle Name</span><span class="info-val">Echavez</span></div>
+                    <div class="info-row"><span class="info-key">Surname</span><span class="info-val">Escribano</span></div>
+                    <div class="info-row"><span class="info-key">Date of Birth</span><span class="info-val">** *** ****</span></div>
+                    <div class="info-row"><span class="info-key">Sex</span><span class="info-val">Male</span></div>
+                    <div class="info-row"><span class="info-key">Marital Status</span><span class="info-val">Single</span></div>
+                    <div class="info-row"><span class="info-key">Nationality</span><span class="info-val">Filipino</span></div>
+                </div>
+                <div class="profile-block" style="padding-top:0">
+                    <p class="block-label">Contact</p>
+                    <div class="info-row"><span class="info-key">Email</span><span class="info-val">mock_email@gmail.com</span></div>
+                    <div class="info-row"><span class="info-key">Contact #</span><span class="info-val">+63 123 4567 890</span></div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="profile-card">
+                <div class="profile-block">
+                    <p class="block-label">Education</p>
+                    <div class="edu-item">
+                        <p class="edu-degree">Information Technology</p>
+                        <p class="edu-school">N*********, Quezon City</p>
+                        <p class="edu-school">*ue*** **** University (***)</p>
+                        <p class="edu-period">****</p>
+                    </div>
+                    <div class="edu-item">
+                        <p class="edu-degree">Technical Vocational — Information Technology</p>
+                        <p class="edu-school">G****** Fa******, ***** City</p>
+                        <p class="edu-school">*at**** College of **** A***** (****)</p>
+                        <p class="edu-period">****</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="profile-card">
+                <div class="profile-block">
+                    <p class="block-label">Work Experience</p>
+                    <div class="exp-item">
+                        <p class="exp-role">IT Specialist</p>
+                        <div class="exp-meta">
+                            <span class="exp-company">Outer Space · Company Name</span>
+                            <span class="exp-badge">2025 — Current</span>
+                        </div>
+                        <p style="font-size:.72rem;color:var(--ink-faint);font-family:var(--font-mono);margin-bottom:.5rem;">Location Address, Philippines</p>
+                        <ul class="exp-list">
+                            <li>Create and manage employee user accounts with appropriate system access.</li>
+                            <li>Managed daily operations to optimize workflow and improve efficiency.</li>
+                            <li>Troubleshoot and resolve system-related issues promptly.</li>
+                            <li>Provide technical support to end-users on system-related problems.</li>
+                            <li>Execute test plans, test cases, and scripts for software quality assurance.</li>
+                            <li>Monitor and respond to the ticketing system by tagged category.</li>
+                        </ul>
+                    </div>
+                    <div class="exp-item">
+                        <p class="exp-role">Technical Support</p>
+                        <div class="exp-meta">
+                            <span class="exp-company">Cosmic Inc. · Company Name</span>
+                            <span class="exp-badge past">2018 — 2020</span>
+                        </div>
+                        <p style="font-size:.72rem;color:var(--ink-faint);font-family:var(--font-mono);margin-bottom:.5rem;">Location Address, Philippines</p>
+                        <ul class="exp-list">
+                            <li>Troubleshot hardware, software, and network issues across departments.</li>
+                            <li>Assisted in maintaining secure access control for staff and research teams.</li>
+                            <li>Analyzed satellite data to identify environmental patterns and anomalies.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="profile-card">
+                <div class="profile-block">
+                    <p class="block-label">Skills</p>
+                    <div class="skill-chips">
+                        <span class="chip">Technical Support &amp; Troubleshooting</span>
+                        <span class="chip">Web Development (HTML, CSS, JS)</span>
+                        <span class="chip">Cybersecurity Fundamentals</span>
+                        <span class="chip">Data Analysis &amp; Visualization</span>
+                        <span class="chip">Network Configuration</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- EXPLORE -->
+<section id="explore" class="page-section">
+    <div class="container">
+        <span class="section-eyebrow">Explore</span>
+        <h2 class="section-heading">Projects</h2>
+        <p class="section-desc">Web pages built for practice — some public, some require credentials.</p>
+        <div class="explore-grid" id="exploreGrid">
+            <!-- filled by JS -->
+        </div>
+    </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="stack" class="page-section">
+    <div class="container">
+        <span class="section-eyebrow">Built With</span>
+        <h2 class="section-heading">Tech &amp; Design Choices</h2>
+        <p class="section-desc">The tools, technologies, and design decisions behind this portfolio.</p>
+        <div class="stack-grid" id="stackGrid"></div>
+    </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+        <div class="modal-header">
+            <h3 id="modalTitle">Project Preview</h3>
+            <button class="modal-close-btn" id="modalClose" aria-label="Close modal">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg>
+            </button>
+        </div>
+        <div class="modal-preview-area">
+            <iframe id="modalIframe" src="" loading="lazy" allowfullscreen sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+            <div class="modal-fallback" id="previewFallback" style="display:none;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                <span>Preview not available</span>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="modal-meta-txt" id="modalMeta"></p>
+            <div style="display:flex;gap:.5rem;">
+                <button class="btn-sm btn-sm-ghost" id="modalClose2">Close</button>
+                <button class="btn-sm btn-sm-primary" id="visitBtn">Visit site ↗</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Chemuel Escribano · Built with HTML, CSS &amp; JavaScript</p>
+</footer>
+
+<script src="./index.js"></script>
+</body>
+</html>
