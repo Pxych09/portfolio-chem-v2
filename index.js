@@ -79,9 +79,9 @@ const certData = [
         status: 'wip',
         statusLabel: 'In Progress',
         modules: [
-            { name: 'HTML',      done: 284, total: 302  },
+            { name: 'HTML',      done: 302, total: 302  },
             { name: 'Computers', done: 16,  total: 16   },
-            { name: 'CSS',       done: 866, total: 1234 },
+            { name: 'CSS',       done: 1234, total: 1234 },
         ]
     },
 ];
