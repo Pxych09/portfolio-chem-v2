@@ -77,7 +77,7 @@ const certData = [
         name: 'Responsive Web Design',
         issuer: 'freeCodeCamp',
         status: 'wip',
-        statusLabel: 'In Progress',
+        statusLabel: 'Completed',
         modules: [
             { name: 'HTML',      done: 302, total: 302  },
             { name: 'Computers', done: 16,  total: 16   },
